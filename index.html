@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <h1 class="centre">Juego de piedra papel tijera</h1>
+            <article class="img__jugar flex-container">
+                <div class="img-jugador flex1 flex-container">
+                    <div class="espacio">
+                        <h2 class="title__persona">Jugador 1 </h2>
+                        <figure class="img__parteone">
+                            <img id="imgJugador" src="img/piedra.png" alt="">
+                        </figure>
+                    </div>
+
+                </div>
+                <div class="img-cpu flex1 flex-container">
+                    <div class="espacio">
+                        <h2 class="title__persona">CPU</h2>
+                        <figure class="img__parteone">
+                            <img id="imgCPU" src="img/tijera.png" alt="">
+                        </figure>
+
+                    </div>
+                </div>
+            </article>
+            <div class="resultado__partido">
+                <output id="resultado" class="resultadocss">Resultado</output>
+            </div>
+            <article class="flex-container">
+                <div class="selecciona flex-container flex2">
+                    <h2 class="centre">Selecciona tirada</h2>
+                    <div class="imagines">
+                        <div class="imagines__content">
+                            <h3 class="centre">Piedra</h3>
+                            <figure class="img__eligir">
+                                <img src="img/piedra.png" alt="pierda" onclick="tirada('piedra')">
+                            </figure>
+                        </div>
+                        <div class="imagines__content">
+                            <h3 class="centre">Papel</h3>
+                            <figure class="img__eligir">
+                                <img src="img/papel.png" alt="papel" onclick="tirada('papel')">
+                            </figure>
+                        </div>
+                        <div class="imagines__content">
+                            <h3 class="centre">Tijera</h3>
+                            <figure class="img__eligir">
+                                <img src="img/tijera.png" alt="tijera" onclick="tirada('tijera')">
+                            </figure>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="resultaldes flex-container flex1">
+                    <h2>Estadisticas</h2>
+                    <div class="resultades__text">
+                        <h3>
+                            Partidas:
+                            <output id="resPartidas"></output>
+                        </h3>
+                        <h3>
+                            Ganadas:
+                            <output id="resGanadas"></output>
+                        </h3>
+                    
+                    
+                        <h3>
+                            Perdidas:
+                            <output id="resPerdidas"></output>
+                        </h3>
+                    
+                    
+                        <h3>
+                            Empatadas:
+                            <output id="resEmpates"></output>
+                        </h3>
+                    </div>
+                    <button onclick="reset()">Reiniciar</button>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+
+</body>
+<script src="ppt.js"></script>
+
+</html>
